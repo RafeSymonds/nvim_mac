@@ -23,20 +23,3 @@ lspconfig.clangd.setup({
     filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" },
     root_dir = lspconfig.util.root_pattern("compile_commands.json", ".git"),
 })
-
--- change autocomplete to tab instead of enter
--- local cmp = require("cmp")
--- cmp.setup({
---     mapping = {
---         ["<Tab>"] = cmp.mapping.confirm({ select = true }),
---     },
---     sources = {
---         { name = "nvim_lsp" },
---         { name = "buffer" },
---         { name = "path" },
---     },
--- })
---
---
---
---
