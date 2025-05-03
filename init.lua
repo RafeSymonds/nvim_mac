@@ -23,3 +23,12 @@ lspconfig.clangd.setup({
     filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" },
     root_dir = lspconfig.util.root_pattern("compile_commands.json", ".git"),
 })
+
+lspconfig.sourcekit.setup({
+    cmd = { "sourcekit-lsp" },
+    filetypes = { "swift" },
+    root_dir = function(fname)
+        -- Manually specify the root directory or use `root_pattern` to find one.
+        return vim.fn.getcwd()
+    end,
+})
