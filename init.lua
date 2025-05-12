@@ -32,3 +32,5 @@ lspconfig.sourcekit.setup({
         return vim.fn.getcwd()
     end,
 })
+
+vim.g.snacks_animate = false
